@@ -84,7 +84,7 @@
 .price {
   position: absolute;
   left: 49%;
-  top: 15%;
+  top: 13%;
   margin: 0px;
   padding: 0px;
   font-family: 'Times New Roman', Times, serif;
@@ -94,7 +94,7 @@
 #buy2 {
   position: absolute;
   font-size: 14px;
-  left: 50%;
+  left: 51%;
   top: 25%;
 
 }
@@ -102,7 +102,7 @@
   position: absolute;
   color: grey;
   font-size: 12px;
-  left: 50.6%;
+  left: 51.6%;
   top: 27%;
 }
 
@@ -110,8 +110,8 @@
   position: absolute;
   color: black;
   font-size: 12px;
-  left: 56.7%;
-  top: 28.2%;
+  left: 57.8%;
+  top: 28.5%;
 }
 
 
@@ -240,7 +240,7 @@
 
 .checkbox {
   position: absolute;
-  top: 195px;
+  top: 175px;
 }
 
 .allstate {
@@ -257,7 +257,7 @@
 }
 #plan {
   position: absolute;
-  top: 203px;
+  top: 183px;
   right: 80px;
 }
 
