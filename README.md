@@ -10,3 +10,12 @@ It is currently not coded to work with Related Items but it shouldn't take any w
 My CSS is a bit wonky but I've gone through and tried to finesse it a little bit. 
 
 If my "shop all" element is giving you trouble, you can change it's orientation by adjusting the #shopall{} id in the css folder. That should be the only area that acts weird.
+
+# CRUD API
+
+  End Points:
+  - GET '/api/products/:_id' retrieves one product based on the id 
+  - POST '/api/products/item' add one product to the db
+  - PUT '/api/products/:_id' updates one product based on the id
+  - DELETE '/api/products/_id' deletes one product from the db based on the id
+  
