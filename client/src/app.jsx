@@ -26,14 +26,14 @@ class App extends React.Component {
   getProduct() {
     axios.get('/api/items')
       .then((results) => {
-        var random = Math.floor(Math.random()*results.data.length);
+        console.log('Successful get', results.data)
         this.setState({
-          allProds: results.data,
-          mainprod: results.data[random],
+          mainprod: results.data,
+          mainImage: results.data.imgurl
         })
       })
       .catch((err) => {
-        console.error(err);
+        console.error('error getting one random', err);
       })
   }
   handleClick(e) {
@@ -86,7 +86,7 @@ class App extends React.Component {
             <ProductView item={this.state.mainprod}/>
           </span>
           <span id="fakecarousel">
-            <FakeCarousel images={this.state.mainprod.imgUrl} handleClick={this.handleClick} />
+            <FakeCarousel images={this.state.mainprod.imgurl} handleClick={this.handleClick} />
           </span>
           <span className="price">
             <PriceView product={this.state.mainprod}/>

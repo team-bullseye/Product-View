@@ -3,13 +3,15 @@ import React from 'react';
 var FakeCarousel = function (props) {
   return (
   <div className="fakescroller">
-    {props.images.map((image, index) => {
-      return (
-      <div key={index}>
-          <img className="fakecarousel"src={image} onClick={props.handleClick} ></img>
+      <div key="0">
+          <img className="fakecarousel"src={props.images} onClick={props.handleClick} ></img>
       </div>
-      )
-    })}
+      <div key="1">
+          <img className="fakecarousel"src={props.images} onClick={props.handleClick} ></img>
+      </div>
+      <div key="2">
+          <img className="fakecarousel"src={props.images} onClick={props.handleClick} ></img>
+      </div>
   </div>
   )
 }
