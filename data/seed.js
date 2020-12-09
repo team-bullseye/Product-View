@@ -1,5 +1,6 @@
 const db = require('../db/index.js');
 const mongoose = require('mongoose');
+//Legacy seed file.
 var product = [
   {
     "id": 1,
@@ -747,7 +748,7 @@ const seedFunc = (arr) => {
       console.log("Not seeded");
     })
 };
-
+console.log('Did seed file run?')
 seedFunc(product);
 
 

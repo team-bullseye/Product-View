@@ -29,7 +29,7 @@ class App extends React.Component {
         console.log('Successful get', results.data)
         this.setState({
           mainprod: results.data,
-          mainImage: results.data.imgurl
+          mainImage: results.data.imgUrl
         })
       })
       .catch((err) => {

@@ -10,10 +10,10 @@ const db = mongoose.connect(mongoUri, { "useNewUrlParser": true })
     console.log(err)
   });
 const Items = mongoose.Schema({
-  id: {type: String},
+  id: {type: String, index: true},
   item: {type: String},
   price: {type: String},
-  imgUrl: [String],
+  imgUrl:{type: String},
   system: {type: String}
 });
 
