@@ -3,9 +3,7 @@ const controller = require('./controller.js');
 
 router
   .route('/items')
-  .get(controller.get)
-  .post(controller.post)
-  .delete(controller.delete)
+  .get(controller.getRandom)
 
 router
   .route('/items/:_id')

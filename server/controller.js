@@ -1,43 +1,41 @@
 const db = require('../db/models.js');
 const games = require('../db/index.js');
+const client = require('../db/postgresIndex.js');
+const maxLength = 10000000;
 const controller = {
-  get: (req, res) => {
-    db.find()
-      .then((results) => {
-        res.status(200).json(results);
-      })
-      .catch((err) => {
+
+  getRandom: (req, res) => {
+    var random = Math.floor(Math.random() * maxLength) + 1;
+    client.query(`SELECT * FROM game WHERE id=${random}`, (err, result) => {
+      if (err) {
+        console.log('Error retreiving One', err);
         res.status(400).send(err);
-      })
-  },
-  post: (req, res) => {
-    db.create(req.body)
-    .then(() => {
-      res.status(200).send('You posted!')
+      }
+      console.log('Successful load');
+      res.status(200).json(result.rows[0]);
     })
-    .catch((err) => {
-      res.status(400).send(err);
-    })
+    // games.findOne({id: random})
+    //   .then((results) => {
+    //     console.log('Successfull getOne', results);
+    //     res.status(200).json(results);
+    //   })
+    //   .catch((err) => {
+    //     console.error('error getting one', err);
+    //     res.status(400).send(err);
+    //   })
   },
-  delete: (req, res) => {
-    db.remove({})
-      .then(() => {
-        res.status(200).send("All entries deleted");
-      })
-      .catch((err) => {
-        res.status(400).send(err);
-      })
-  },
+
+  // CRUD Operations
   getOne: (req, res) => {
     games.findOne(req.params)
-      .then((results) => {
-        console.log('Successfull getOne', results);
-        res.status(200).json(results);
-      })
-      .catch((err) => {
-        console.error('error getting one', err);
-        res.status(400).send(err);
-      })
+    .then((results) => {
+      console.log('Successfull getOne', results);
+      res.status(200).json(results);
+    })
+    .catch((err) => {
+      console.error('error getting one', err);
+      res.status(400).send(err);
+    })
   },
   postOne: (req, res) => {
     games.create(req.body)
