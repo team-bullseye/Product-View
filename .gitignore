@@ -3,13 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 *.csv
-postgresIndex.js
+db/postgresIndex.js
 *bundle.js
-package-lock.json
+./package-lock.json
 *.har
 test-script.js
 newrelic.js
-
+.vscode
 # User-specific files
 *.rsuser
 *.suo

@@ -1,6 +1,6 @@
 require('newrelic');
 const express = require('express');
-const router = require('./router.js');
+const router = require('./postgresRouter.js');
 const path = require('path');
 const morgan = require('morgan');
 const cors = require('cors');
