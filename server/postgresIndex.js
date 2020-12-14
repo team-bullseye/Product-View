@@ -10,7 +10,7 @@ const app = express();
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}));
-//app.use(morgan('dev'));
+app.use(morgan('dev'));
 app.use(cors());
 //dirname is global but path goes based on relative files.
 //it was routing to the old path.

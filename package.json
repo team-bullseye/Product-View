@@ -5,8 +5,9 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon ./server/index.js",
-    "sqlserver": "nodemon ./server/postgresIndex.js",
+    "start": "nodemon ./server/postgresIndex.js",
+    "seed": "psql -U postgres < db/game.sql",
+    "mongoserver": "nodemon ./server/index.js",
     "build": "webpack -w"
   },
   "repository": {
