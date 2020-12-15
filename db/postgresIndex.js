@@ -8,7 +8,7 @@ const pool = new Pool({
 
 const client = new Client({
   user: 'postgres',
-  host: '18.221.41.15',
+  host: '52.53.234.253',
   database: 'games',
   password: 'root',
   port: 5432
